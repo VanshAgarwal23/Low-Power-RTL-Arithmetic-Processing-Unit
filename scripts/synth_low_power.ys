@@ -1,0 +1,16 @@
+read_verilog -sv rtl/adder.v
+read_verilog -sv rtl/subtractor.v
+read_verilog -sv rtl/multiplier.v
+read_verilog -sv rtl/divider.v
+read_verilog -sv rtl/logic_unit.v
+read_verilog -sv rtl/operand_isolation.v
+read_verilog -sv rtl/low_power_apu.v
+
+hierarchy -top low_power_apu
+
+proc
+opt
+check
+
+stat
+
