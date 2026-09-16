@@ -1,0 +1,18 @@
+{
+    "DESIGN_NAME": "conventional_apu",
+    "VERILOG_FILES": [
+        "dir::../../rtl/adder.v",
+        "dir::../../rtl/subtractor.v",
+        "dir::../../rtl/multiplier.v",
+        "dir::../../rtl/divider.v",
+        "dir::../../rtl/logic_unit.v",
+        "dir::../../rtl/conventional_apu.v"
+    ],
+    "CLOCK_PORT": "clk",
+    "CLOCK_PERIOD": 10.0,
+    "FP_CORE_UTIL": 40,
+    "PL_TARGET_DENSITY": 50,
+    "RUN_CTS": true,
+    "RUN_LVS": false,
+    "RUN_DRT": false
+}

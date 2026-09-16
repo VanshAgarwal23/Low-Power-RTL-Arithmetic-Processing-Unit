@@ -1,0 +1,19 @@
+{
+    "DESIGN_NAME": "low_power_apu",
+    "VERILOG_FILES": [
+        "dir::adder.v",
+        "dir::subtractor.v",
+        "dir::multiplier.v",
+        "dir::divider.v",
+        "dir::logic_unit.v",
+        "dir::operand_isolation.v",
+        "dir::low_power_apu.v"
+    ],
+    "CLOCK_PORT": "clk",
+    "CLOCK_PERIOD": 10.0,
+    "FP_CORE_UTIL": 40,
+    "PL_TARGET_DENSITY": 0.50,
+    "RUN_CTS": true,
+    "RUN_LVS": false,
+    "RUN_DRT": false
+}
