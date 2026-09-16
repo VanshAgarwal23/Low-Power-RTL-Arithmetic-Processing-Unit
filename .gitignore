@@ -1,0 +1,48 @@
+# Simulation files
+*.vcd
+*.fst
+*.wlf
+*.vvp
+
+# Verilator
+obj_dir/
+*.log
+
+# Yosys
+*.json
+*.il
+
+# EDA temporary files
+*.tmp
+*.bak
+*.swp
+*.swo
+
+# OpenROAD / OpenLane generated data
+runs/
+openlane_runs/
+*.odb
+*.def
+*.lef
+*.spef
+*.sdf
+*.sdc
+
+# Layout / extraction generated files
+*.gds
+*.mag
+*.ext
+*.spice
+
+# Reports generated during experiments
+*.rpt
+
+# Python
+__pycache__/
+*.pyc
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
