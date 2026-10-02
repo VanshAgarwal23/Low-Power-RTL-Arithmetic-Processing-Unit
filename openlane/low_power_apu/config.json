@@ -1,19 +1,29 @@
 {
     "DESIGN_NAME": "low_power_apu",
     "VERILOG_FILES": [
-        "dir::adder.v",
-        "dir::subtractor.v",
-        "dir::multiplier.v",
-        "dir::divider.v",
-        "dir::logic_unit.v",
-        "dir::operand_isolation.v",
-        "dir::low_power_apu.v"
+        "dir::../../rtl/adder.v",
+        "dir::../../rtl/subtractor.v",
+        "dir::../../rtl/multiplier.v",
+        "dir::../../rtl/logic_unit.v",
+        "dir::../../rtl/operand_isolation.v",
+        "dir::../../rtl/low_power_apu.v"
     ],
     "CLOCK_PORT": "clk",
     "CLOCK_PERIOD": 10.0,
     "FP_CORE_UTIL": 40,
-    "PL_TARGET_DENSITY": 0.50,
+    "PL_TARGET_DENSITY": 0.45,
+    "MAX_FANOUT_CONSTRAINT": 10,
+    "SYNTH_STRATEGY": "DELAY 4",
+    "SYNTH_BUFFERING": true,
     "RUN_CTS": true,
-    "RUN_LVS": false,
-    "RUN_DRT": false
+    "RUN_LVS": true,
+    "RUN_DRT": true,
+    "RUN_HEURISTIC_DIODE_INSERTION": false,
+    "GRT_REPAIR_ANTENNAS": true,
+    "GRT_ANT_ITERS": 50,
+    "GRT_MAX_DIODE_INS_ITERS": 10,
+    "GRT_ANT_MARGIN": 0,
+    "CLOCK_BUFFER_FANOUT": 16,
+    "CTS_MAX_FANOUT": 8,
+    "CTS_SINK_CLUSTERING_SIZE": 8
 }

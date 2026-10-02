@@ -16,7 +16,6 @@ module low_power_apu_power_tb;
     localparam ADD = 3'b000;
     localparam SUB = 3'b001;
     localparam MUL = 3'b010;
-    localparam DIV = 3'b011;
     localparam AND_OP = 3'b100;
     localparam OR_OP  = 3'b101;
     localparam XOR_OP = 3'b110;
@@ -87,12 +86,6 @@ module low_power_apu_power_tb;
         execute(MUL, 16'hFFFF, 16'hFFFF);
         execute(MUL, 16'hAAAA, 16'h5555);
 
-        // DIV workload
-        execute(DIV, 16'h0064, 16'h0004);
-        execute(DIV, 16'hFFFF, 16'h0003);
-        execute(DIV, 16'hAAAA, 16'h0011);
-        execute(DIV, 16'h1234, 16'h0000);
-
         // Logic workload
         execute(AND_OP, 16'hAAAA, 16'h5555);
         execute(AND_OP, 16'hFFFF, 16'h0F0F);
@@ -111,7 +104,6 @@ module low_power_apu_power_tb;
             execute(ADD, 16'h1234, 16'h5678);
             execute(SUB, 16'hFFFF, 16'h1234);
             execute(MUL, 16'h0017, 16'h0023);
-            execute(DIV, 16'hABCD, 16'h0011);
             execute(AND_OP, 16'hF0F0, 16'h0FF0);
             execute(OR_OP, 16'hAAAA, 16'h1111);
             execute(XOR_OP, 16'h5555, 16'hAAAA);

@@ -12,7 +12,6 @@ module operand_isolation_activity_tb;
     localparam ADD = 3'b000;
     localparam SUB = 3'b001;
     localparam MUL = 3'b010;
-    localparam DIV = 3'b011;
     localparam AND_OP = 3'b100;
     localparam OR_OP  = 3'b101;
     localparam XOR_OP = 3'b110;
@@ -56,7 +55,7 @@ module operand_isolation_activity_tb;
         /*
          * ADD phase:
          * A and B change continuously while ADD remains selected.
-         * SUB/MUL/DIV/LOGIC inputs should remain isolated.
+         * SUB/MUL/LOGIC inputs should remain isolated.
          */
         opcode = ADD;
         enable = 1'b1;
@@ -76,17 +75,6 @@ module operand_isolation_activity_tb;
             @(negedge clk);
             A = (16'hAAAA ^ (i * 17));
             B = (16'h5555 + (i * 13));
-        end
-
-        /*
-         * DIV phase
-         */
-        opcode = DIV;
-
-        for (i = 0; i < 200; i = i + 1) begin
-            @(negedge clk);
-            A = (16'hF000 ^ (i * 23));
-            B = (16'h0011 + (i % 31));
         end
 
         /*
