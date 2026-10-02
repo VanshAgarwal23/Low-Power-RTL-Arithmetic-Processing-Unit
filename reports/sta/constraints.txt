@@ -1,14 +1,5 @@
-========================================
-TIMING CONSTRAINTS
-========================================
-
-Design          : low_power_apu
-
-Clock Port      : clk
-Clock Period    : 10.0 ns
-Clock Frequency : 100 MHz
-
-Clock Constraint:
-create_clock -period 10.0 [get_ports clk]
-
-========================================
+21:Reading design constraints file at '/home/vansh/Low-Power-RTL-Arithmetic-Processing-Unit/openlane/low_power_apu/runs/low_power_apu_timing_fix11/tmp/17-low_power_apu.sdc'…
+9296:report_checks -unconstrained
+9453: report_check_types -max_slew -max_cap -max_fanout -violators
+9479:check_setup -verbose -unconstrained_endpoints -multiple_clock -no_clock -no_input_delay -loops -generated_clocks
+9481:Warning: There is 1 unconstrained endpoint.
