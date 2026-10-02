@@ -25,7 +25,6 @@ module low_power_apu_tb;
     localparam OP_ADD = 3'b000;
     localparam OP_SUB = 3'b001;
     localparam OP_MUL = 3'b010;
-    localparam OP_DIV = 3'b011;
     localparam OP_AND = 3'b100;
     localparam OP_OR  = 3'b101;
     localparam OP_XOR = 3'b110;
@@ -113,18 +112,6 @@ module low_power_apu_tb;
                 OP_MUL: begin
 
                     full_result = A_in * B_in;
-
-                end
-
-
-                OP_DIV: begin
-
-                    if (B_in != 0)
-                        selected_result = A_in / B_in;
-                    else begin
-                        selected_result = 0;
-                        expected_flags[6] = 1'b1;
-                    end
 
                 end
 
@@ -354,35 +341,6 @@ module low_power_apu_tb;
 
         check_operation(16'hFFFF, 16'hFFFF, OP_MUL,
                         "MUL MAX x MAX");
-
-
-        // ==================================================
-        // DIV
-        // ==================================================
-
-        check_operation(16'h0000, 16'h0000, OP_DIV,
-                        "DIV ZERO / ZERO");
-
-        check_operation(16'h0000, 16'h0001, OP_DIV,
-                        "DIV ZERO / ONE");
-
-        check_operation(16'h0001, 16'h0001, OP_DIV,
-                        "DIV ONE / ONE");
-
-        check_operation(16'h000A, 16'h0002, OP_DIV,
-                        "DIV EXACT");
-
-        check_operation(16'h0007, 16'h0003, OP_DIV,
-                        "DIV REMAINDER");
-
-        check_operation(16'h0003, 16'h0005, OP_DIV,
-                        "DIV DIVISOR GREATER");
-
-        check_operation(16'hFFFF, 16'h0002, OP_DIV,
-                        "DIV MAX / TWO");
-
-        check_operation(16'hFFFF, 16'h0000, OP_DIV,
-                        "DIVIDE BY ZERO");
 
 
         // ==================================================

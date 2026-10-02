@@ -1,0 +1,13 @@
+========================================
+CLOCK DEFINITION
+========================================
+
+Design          : low_power_apu
+Clock Port      : clk
+Clock Period    : 10.0 ns
+Clock Frequency : 100 MHz
+
+Clock Source    : Primary input port
+Clock Type      : Primary clock
+
+========================================

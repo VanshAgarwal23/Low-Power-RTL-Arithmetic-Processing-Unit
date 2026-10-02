@@ -4,7 +4,6 @@
         "dir::adder.v",
         "dir::subtractor.v",
         "dir::multiplier.v",
-        "dir::divider.v",
         "dir::logic_unit.v",
         "dir::operand_isolation.v",
         "dir::low_power_apu.v"

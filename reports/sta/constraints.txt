@@ -1,0 +1,14 @@
+========================================
+TIMING CONSTRAINTS
+========================================
+
+Design          : low_power_apu
+
+Clock Port      : clk
+Clock Period    : 10.0 ns
+Clock Frequency : 100 MHz
+
+Clock Constraint:
+create_clock -period 10.0 [get_ports clk]
+
+========================================
